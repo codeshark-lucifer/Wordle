@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto";
+}
+
+header {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding-bottom: 5px;
+    text-decoration: underline dashed;
+}
+
+.options {
+    font-size: 12px;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.info {
+    display: flex;
+    gap: 10px;
+}
+
+.info p {
+    outline-color: #252525;
+    outline-style: dashed;
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+
+button {
+    cursor: pointer;
+} 
+
+#new-game {
+    padding: 8px 12px;
+    border: #222 1px solid;
+    border-radius: 8px;   
+    background-color: transparent;
+    transition: all 0.2s ease;
+    font-size: 12px;
+}
+
+#new-game:hover {
+    background-color: #252525;
+    color: #fff;
+    font-weight: bold;
+}
+
+.key {
+    user-select: none;
+    text-align: center;
+    background-color: transparent;
+    border-radius: 3px;
+    border: black 1px solid;
+    z-index: 0;
+    width: 30px;
+}
+
+.key:hover {
+    z-index: 1;
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+    outline-color: black;
+    outline-style: dashed;
+    outline-width: 1px;
+}
+
+.enter-key {
+    width: 80px;
+}
+
+.backspace-key {
+    width: 120px;
+}
+
+#game {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+#keyboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    gap: 3px;
+
+    bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.row {
+    /* background-color: yellowgreen; */
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    min-height: 40px;
+    gap: 3px;
+}
+
+.square {
+    z-index: 0;
+    background-color: #f7d08377;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: inset 1px 1px 0px #0000004d;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-family: "Roboto";
+    font-weight: bold;
+    color: #252525;
+}
+
+
+#board {
+    display: grid;
+    width: 300px;
+    height: 350px;
+    grid-template-rows: repeat(6, 1fr);
+    gap: 10px;
+}
+
+.rows {
+    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.active {
+    outline-color:rgb(255, 174, 0);
+    outline-style: dashed;
+    z-index: 1;
+}
+
+#clue {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto";
+}
+
+.correct {
+    background-color: #51ff11;
+}
+
+.incorrect {
+    background-color: tomato;
+}
+
+.worng {
+    background-color: yellow;
+}
